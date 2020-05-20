@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         requets_permission();
 
-        //post();111111222git4444
+
+        //post();123456
+
         mLogin = findViewById(R.id.login);
         mBtn_post = findViewById(R.id.btn_post);
         mBtn_get = findViewById(R.id.btn_get);
