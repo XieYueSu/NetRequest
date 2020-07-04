@@ -48,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requets_permission();
-
-        //post();11100000011111222
-
-
+         //post();aaaaaaaaaaaaaaa
+        //post();aaaaaaaa
+   //post();aaaaaaaaaaaaa
+  //post();aaaaaaaaa
         mLogin = findViewById(R.id.login);
         mBtn_post = findViewById(R.id.btn_post);
         mBtn_get = findViewById(R.id.btn_get);
