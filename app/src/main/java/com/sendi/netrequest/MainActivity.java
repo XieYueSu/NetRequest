@@ -2,6 +2,7 @@ package com.sendi.netrequest;
 
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
@@ -10,10 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-
-import java.io.File;
-import java.io.IOException;
 import com.google.gson.Gson;
+import com.sendi.netrequest.rxquest.SecondActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,17 +40,15 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtn_get;
     private String mToken;
 
-      //aaaaaaaaaaaaaaa
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         requets_permission();
-         //post();2222222222
-        //post();222222222
-   //post();222222222222
-  //post();2222222222
+        Log.d("cccfff","onCreate");
+        //post();11100000011111222
+
+
         mLogin = findViewById(R.id.login);
         mBtn_post = findViewById(R.id.btn_post);
         mBtn_get = findViewById(R.id.btn_get);
@@ -59,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                postJson();
+                //    postJson();
+                Intent  intent=new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
         mBtn_post.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 .readTimeout(20, TimeUnit.SECONDS)
                 .build();
         //json为String类型的json数据
-      //  RequestBody requestBody = RequestBody.create(JSON, String.valueOf(json));
+        //  RequestBody requestBody = RequestBody.create(JSON, String.valueOf(json));
         RequestBody requestBody = RequestBody.create(JSON, json2);
 
         Request request = new Request.Builder()
@@ -228,8 +227,8 @@ public class MainActivity extends AppCompatActivity {
                         LogUtil.Log("nnnsss", "userId=" + userId);
                         String userName2 = dataObject.getString("userName");
                         LogUtil.Log("nnnsss", "userName2=" + userName2);
-                     //   Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                       boolean  is_main_thread=isMainThread();
+                        //   Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                        boolean  is_main_thread=isMainThread();
                         LogUtil.Log("nnnsss", "is_main_thread=" + is_main_thread);
                         LogUtil.Log("nnnsss", "is_main_process=" + isMainProcess());
 
@@ -318,7 +317,6 @@ public class MainActivity extends AppCompatActivity {
                     });
         }
     }
-      //bbbbbbb
 
     public boolean isMainThread() {
         return Looper.getMainLooper() == Looper.myLooper();
@@ -338,5 +336,41 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return false;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("cccfff","onStart");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("cccfff","onRestart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("cccfff","onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("cccfff","onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("cccfff","onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("cccfff","onDestroy");
     }
 }
