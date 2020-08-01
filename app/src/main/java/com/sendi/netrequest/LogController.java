@@ -6,11 +6,8 @@ package com.sendi.netrequest;
 public class LogController {
     public void upload(){
 
-        //66666666
-        //77777777
+        //1234567
 
-        //11111111
-        //12222222
 
 
     }
