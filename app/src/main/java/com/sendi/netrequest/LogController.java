@@ -1,4 +1,4 @@
-package com.sendi.netrequest.rxquest;
+package com.sendi.netrequest;
 
 /**
  * Created by xieys on 2020/8/1.
