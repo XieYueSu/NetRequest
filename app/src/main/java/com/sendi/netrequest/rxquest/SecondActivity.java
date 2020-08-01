@@ -54,7 +54,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         requets_permission();
-
+        Log.d("cccfff","bonCreate");
         //post();
         mLogin = findViewById(R.id.login);
         mBtn_post = findViewById(R.id.btn_post);
@@ -498,5 +498,43 @@ public class SecondActivity extends AppCompatActivity {
             }
         }
         return false;
+    }
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("cccfff","bonRestart");
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("cccfff","bonStart");
+    }
+
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("cccfff","bonResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("cccfff","bonPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("cccfff","bonStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("cccfff","bonDestroy");
     }
 }
