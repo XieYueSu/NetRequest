@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         requets_permission();
         Log.d("cccfff","onCreate");
-        //post();11100000011111222
+        //post();11100000011111222aaaaaa
 
 
         mLogin = findViewById(R.id.login);
